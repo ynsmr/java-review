@@ -10,7 +10,7 @@ public class TeamTest {
 
         Team<SoccerPlayer> liverpool = new Team<>("Liverpool");
 
-        Team<String> brokenTeam = new Team<>("This won't work");
+//        Team<String> brokenTeam = new Team<>("This won't work");
 
 //        liverpool.addPlayer(joe);
 //        liverpool.addPlayer(pat);

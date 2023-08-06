@@ -18,7 +18,7 @@ public class ArraySorting {
         Sorting bubbleSort = () -> System.out.println("Bubble Sorting");
         as.sort(bubbleSort);
 
-        as.sort(() -> System.out.println("Bubble Sorting"));
+        as.sort(() -> System.out.println("Bubble Sorting")); // We can directly pass lambda instead of instance of interface
 
 
 

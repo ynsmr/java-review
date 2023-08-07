@@ -16,6 +16,7 @@ public class OrangeTest {
         OrangeFormatter simpleFormatter = orange -> "An orange of " + orange.getWeight() + "g";
         prettyPrintApple(inventory, simpleFormatter);
 
+
         prettyPrintApple(inventory, orange -> "An orange of " + orange.getWeight() + "g"); // With curly braces you have to use return
 
         System.out.println("**********************************");

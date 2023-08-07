@@ -10,7 +10,8 @@ public class AppleFormatTest {
         Apple a4 = new Apple(110, Color.GREEN);
 
         List<Apple> appleBasket = new ArrayList<>(Arrays.asList(a1, a2, a3, a4));
-        prettyPrint(appleBasket, new AppleSimpleFormatter());
+        prettyPrint(appleBasket, new AppleFancyFormatter());
+        prettyPrint(appleBasket, (a) -> {System.out.println("A "+ a.getColor()+" apple of "+ a.getWeight()+"g");});
 
 
     }

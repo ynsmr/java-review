@@ -2,6 +2,7 @@ package task;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 public class OrangeTest {
     public static void main(String[] args) {
@@ -13,14 +14,14 @@ public class OrangeTest {
         inventory.add(Orange.builder().weight(500).color(Color.RED).build());
         inventory.add(Orange.builder().weight(300).color(Color.GREEN).build());
 
-        OrangeFormatter simpleFormatter = orange -> "An orange of " + orange.getWeight() + "g";
+        Function<Orange, String> simpleFormatter = orange -> "An orange of " + orange.getWeight() + "g";
         prettyPrintApple(inventory, simpleFormatter);
 
 
         prettyPrintApple(inventory, orange -> "An orange of " + orange.getWeight() + "g"); // With curly braces you have to use return
 
         System.out.println("**********************************");
-        OrangeFormatter fancyFormatter = orange -> {
+        Function<Orange, String> fancyFormatter = orange -> {
             String characteristic = orange.getWeight()>150? "Heavy":"Light";
             return "A " + characteristic + " " + orange.getColor() + " orange";
         };
@@ -31,9 +32,9 @@ public class OrangeTest {
 
     }
 
-    public static void prettyPrintApple(List<Orange> inventory, OrangeFormatter orangeFormatter){
+    public static void prettyPrintApple(List<Orange> inventory, Function<Orange, String> orangeFormatter){
         for (Orange orange:inventory){
-            String output = orangeFormatter.accept(orange);
+            String output = orangeFormatter.apply(orange);
             System.out.println(output);
         }
 

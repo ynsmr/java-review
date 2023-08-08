@@ -2,6 +2,7 @@ package doublecolonoperator;
 
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Demo {
     public static void main(String[] args) {
@@ -36,6 +37,13 @@ public class Demo {
 
         Consumer<Integer> display2 = System.out::println;
         display2.accept(55);
+
+        Function<Integer, Double> v2 = new MyClass()::method;
+        BiFunction<MyClass, Integer, Double> v3 = MyClass::method;
+
+        BiFunction<String, String, String> v4 = String::concat;
+
+
 
 
 

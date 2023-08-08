@@ -29,7 +29,7 @@ public class CarTest {
         System.out.println(honda.getMake()+" "+honda.getModel());
 
         BiFunction<String, Integer, Car> b2 = Car::new;
-        Car nissan = b2.apply("Nisssan", 2005);
+        Car nissan = b2.apply("Nissan", 2005);
         System.out.println(nissan.getModel());
 
     }

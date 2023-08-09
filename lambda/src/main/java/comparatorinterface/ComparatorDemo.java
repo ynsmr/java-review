@@ -49,7 +49,7 @@ public class ComparatorDemo {
         //Reversed
         myInventory.sort(comparing(Apple::getWeight).reversed());
 
-        //Chaining
+        //Chaining the comparator methods
         myInventory.sort(comparing(Apple::getWeight).reversed().thenComparing(Apple::getColor));
         System.out.println(myInventory);
 

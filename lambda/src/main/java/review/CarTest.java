@@ -28,6 +28,21 @@ public class CarTest {
 
         System.out.println(filter(carList, new CarNewPredicate()));
 
+        //Assign lambda to instance of interface
+        CarPredicate carPredicate = (Car car) -> car.getTopSpeed() > 160;
+        System.out.println(filter(carList, carPredicate));
+
+        //Pass lambda directly
+        System.out.println(filter(carList, car -> car.getTopSpeed() > 160));
+
+        
+
+
+
+
+
+
+
 
     }
 

@@ -39,7 +39,7 @@ public class Demo {
         display2.accept(55);
 
         Function<Integer, Double> v2 = new MyClass()::method;
-        BiFunction<MyClass, Integer, Double> v3 = MyClass::method;
+        BiFunction<MyClass, Integer, Double> v3 = MyClass::method;  //If object type is provided, we can reference instance method by class name
 
         BiFunction<String, String, String> v4 = String::concat;
 

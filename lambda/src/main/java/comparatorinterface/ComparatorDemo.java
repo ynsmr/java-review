@@ -1,9 +1,6 @@
 package comparatorinterface;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 import static java.util.Comparator.comparing;
 import static java.util.Comparator.comparingLong;
@@ -23,12 +20,13 @@ public class ComparatorDemo {
         Collections.sort(list, new MyComparator());
         System.out.println(list);
 
-        Collections.sort(list, (o1, o2) -> (o1>o2) ? -1 : (o2<o1) ? 1:0);
+        Collections.sort(list, (o1, o2) -> (o1>o2) ? -1 : (o2==o1) ? 0:1);
         System.out.println(list);
 
         //Ascending order
         list.sort((o1,o2) -> o1.compareTo(o2));
         System.out.println(list);
+
 
         list.sort((o2,o1)-> o1.compareTo(o2));
         System.out.println(list);

@@ -10,7 +10,7 @@ public class MatchingAndFinding {
 
         System.out.println("-------------------------");
         //ANY MATCH
-        if(DishData.getAll().stream().anyMatch(dish -> dish.isVegetarian())){
+        if(DishData.getAll().stream().anyMatch(Dish::isVegetarian)){
             System.out.println("The menu is vegetarian friendly");
         }
 

@@ -16,7 +16,6 @@ public class Tasks {
         List<Integer> numbers1 = Arrays.asList(1,2,3);
         List<Integer> numbers2 = Arrays.asList(3,4);
 
-
         List<int[]> pairs = numbers1.stream()
                 .flatMap(n1 -> numbers2.stream().map(n2 -> new int[]{n1, n2}))
                 .collect(Collectors.toList());

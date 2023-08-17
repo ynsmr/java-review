@@ -50,6 +50,7 @@ public class TransactionsTest {
                 .map(Transaction::getTrader)
                 .map(Trader::getName)
                 .sorted()
+                .distinct()
                 .collect(Collectors.joining(", "));
 
         System.out.println(names);
@@ -82,9 +83,13 @@ public class TransactionsTest {
 
         System.out.println("-----------------------------");
         //TASK 8
-        Optional<Integer> min = transactions.stream()
-                .map(Transaction::getValue)
-                .reduce(Integer::min);
+        Optional<Transaction> minTransaction = transactions.stream()
+                .reduce((t1, t2) -> t1.getValue() < t2.getValue() ? t1 : t2);
+
+        System.out.println(minTransaction.get());
+
+        Optional<Transaction> min = transactions.stream()
+                .min(comparing(Transaction::getValue));
 
         System.out.println(min.get());
 

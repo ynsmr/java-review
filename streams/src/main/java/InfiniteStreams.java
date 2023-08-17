@@ -4,7 +4,7 @@ import java.util.stream.Stream;
 public class InfiniteStreams {
     public static void main(String[] args) {
 
-        Stream.iterate(0, n->n+2)
+        Stream.iterate(0, n->n+2) //Lambda should define the successor element
                 .limit(5)
                 .forEach(System.out::println);
 
@@ -15,7 +15,13 @@ public class InfiniteStreams {
         //FIBONACCI TASK
         Stream.iterate(new int[]{0,1}, a-> new int[]{a[1], a[0]+a[1]})
                 .limit(20)
-                .forEach(t -> System.out.println("("+t[0]+","+t[1]+")"));
+                .forEach(t-> System.out.println(Arrays.toString(t)));
+                //.forEach(t -> System.out.println("("+t[0]+","+t[1]+")"));
+
+        Stream.iterate(new int[]{0, 1}, a-> new int[]{a[1], a[0]+a[1]})
+                .limit(8)
+                .map(t -> t[0])
+                .forEach(System.out::println);
 
         //FIBONACCI REGULAR
         int[] origin = {0, 1};
@@ -27,6 +33,8 @@ public class InfiniteStreams {
             origin[0]= origin[1];
             origin[1]= firstIndex+origin[1];
         }
+
+
 
     }
 }

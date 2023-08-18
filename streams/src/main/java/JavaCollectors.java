@@ -82,7 +82,7 @@ public class JavaCollectors {
 
         System.out.println(veggieDish);
 
-        System.out.println("---------grouping()-----------");
+        System.out.println("---------groupingBy()-----------");
         //groupingBy(): is used for grouping objects by some property and storing results in a map instance
         Map<Type, List<Dish>> dishType = DishData.getAll().stream()
                 .collect(Collectors.groupingBy(Dish::getType));

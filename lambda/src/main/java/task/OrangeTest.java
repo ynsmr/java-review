@@ -27,8 +27,6 @@ public class OrangeTest {
         //prettyPrintOrange(inventory, orange -> "An orange of " + orange.getWeight() + " grams.");
 
 
-
-
     }
 
     private static void prettyPrintOrange(List<Orange> inventory, OrangeFormatter orangeFormatter){

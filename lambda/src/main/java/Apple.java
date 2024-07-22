@@ -1,17 +1,10 @@
 public class Apple {
-    private int weight;
+
     private Color color;
+    private double weight;
 
-    public Apple(int weight, Color color) {
-        this.weight = weight;
+    public Apple(Color color, double weight) {
         this.color = color;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
         this.weight = weight;
     }
 
@@ -23,11 +16,19 @@ public class Apple {
         this.color = color;
     }
 
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     @Override
     public String toString() {
         return "Apple{" +
-                "weight=" + weight +
-                ", color=" + color +
+                "color=" + color +
+                ", weight=" + weight +
                 '}';
     }
 }

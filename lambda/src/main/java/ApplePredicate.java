@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+@FunctionalInterface
 public interface ApplePredicate {
-    boolean test(Apple apple);
+
+   boolean test(Apple apple);
+
 }

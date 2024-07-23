@@ -2,7 +2,11 @@ package comparator;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
+
+import static java.util.Comparator.comparing;
 
 
 public class ComparatorDemo {
@@ -29,6 +33,26 @@ public class ComparatorDemo {
         //Descending order
         list.sort((o1, o2) -> o2.compareTo(o1));
         System.out.println(list);
+
+        List<Apple> myInventory = Arrays.asList(
+                new Apple(80, Color.RED),
+                new Apple(90, Color.GREEN),
+                new Apple(70, Color.GREEN),
+                new Apple(30, Color.RED)
+        );
+
+        Comparator<Apple> sortApple = comparing( apple -> apple.getWeight());
+        myInventory.sort(sortApple);
+
+        myInventory.sort(comparing(Apple::getWeight));
+        //myInventory.sort(comparing(apple -> apple.getWeight()));
+
+        //Reversed
+        myInventory.sort(comparing(Apple::getWeight).reversed());
+
+        //Chaining
+        myInventory
+                .sort(comparing(Apple::getWeight).reversed().thenComparing(Apple::getColor));
 
 
 

@@ -4,6 +4,10 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Course {
-    private String courseName;
+
+    private String userName;
     private Integer courseId;
+
+
+
 }

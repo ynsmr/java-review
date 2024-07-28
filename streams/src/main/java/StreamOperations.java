@@ -39,6 +39,12 @@ public class StreamOperations {
                 .filter(i -> i%3 == 0)
                 .forEach(System.out::println);
 
+        List<String> words = Arrays.asList("JAVA", "APPLE", "HONDA", "DEVELOPER");
+
+
+
+
+
 
 
 

@@ -30,7 +30,6 @@ public class DishTask {
                 .forEach(System.out::println);
 
         //Print all dish name that are below 400 calories sorted
-
         System.out.println("*************");
 
         DishData.getAll().stream()
@@ -38,6 +37,9 @@ public class DishTask {
                 .sorted(Comparator.comparing(Dish::getCalories).reversed()) //sort before mapping
                 .map(Dish::getName)
                 .forEach(System.out::println);
+
+
+
 
 
 

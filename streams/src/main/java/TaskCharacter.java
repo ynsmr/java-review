@@ -10,8 +10,7 @@ public class TaskCharacter {
         words.stream()
                 .map(String::length)
                 .forEach(System.out::println);
-
-
-
     }
+
+
 }

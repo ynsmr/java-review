@@ -22,6 +22,8 @@ public class BigDecimalDemo {
         System.out.println(number1.setScale(2, RoundingMode.FLOOR));
 
 
+
+
         System.out.println(new BigDecimal("2").compareTo(new BigDecimal("2")));
         System.out.println(new BigDecimal("2").compareTo(new BigDecimal("3")));
         System.out.println(new BigDecimal("3").compareTo(new BigDecimal("2")));

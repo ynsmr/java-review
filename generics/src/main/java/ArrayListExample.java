@@ -4,6 +4,7 @@ public class ArrayListExample {
 
     public static void main(String[] args) {
 
+
         ArrayList<Integer> items = new ArrayList<Integer>();
 
         items.add(1);
@@ -11,23 +12,24 @@ public class ArrayListExample {
         items.add(3);
         items.add(4);
         items.add(5);
-        //items.add("apple"); Type checking at compile time with generics
+        //items.add("apple");
 
         printDouble(items);
-
 
     }
 
     private static void printDouble(ArrayList<Integer> items) {
 
-//        for (Object each: items){
+//        for (Object i : items){
+//            System.out.println((Integer) i * 2);  // We need to cast since i is an object
 //
-//            System.out.println((Integer)each*2);
+//
 //        }
 
-        for (Integer i: items){
+        for (int i : items){
+            System.out.println(i * 2);  // We need to cast since i is an object
 
-            System.out.println(i*2); //No need to cast thanks to generics
+
         }
 
 

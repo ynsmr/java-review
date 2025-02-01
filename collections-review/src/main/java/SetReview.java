@@ -8,7 +8,9 @@ public class SetReview {
         mySet.add(new Student(7, "John"));
         mySet.add(new Student(8, "Ahmet"));
         mySet.add(new Student(9, "Steve"));
-        mySet.add(new Student(9, "Steve")); // Another object with same field values, does nor compare content of objects
+        mySet.add(new Student(9, "Steve")); // Another object with same field values, does not compare content of objects
+
+        //We have to implement equals and hashCode methods in the class of compared objects to avoid objects with same content.
 
         System.out.println(mySet);
 

@@ -12,7 +12,6 @@ public class ArrayListReview {
 
         System.out.println(students);
 
-
         // Iteration on ArrayLists
         //1. For loop with get(index)
         for (int i=0; i<students.size(); i++){
@@ -26,26 +25,31 @@ public class ArrayListReview {
         while (iter.hasNext()){
             System.out.println(iter.next());
         }
+
         //Backwards Iteration
         System.out.println("Printing with Iterator Backwards...............");
-        while (((ListIterator<?>) iter).hasPrevious()){
+        while (((ListIterator<?>) iter).hasPrevious()){  //We need to downcast to reach the method.
             System.out.println(((ListIterator<?>) iter).previous());
+
         }
+
         //3. for each loop
         System.out.println("Printing with for each loop");
-        for (Student student: students){
+        for(Student student: students){
             System.out.println(student);
         }
+
         //4. Lambda
         System.out.println("Printing with lambda");
         students.forEach(student -> System.out.println(student));
-        //Sorting elements in list
 
+        //Sorting elements in list
         Collections.sort(students, new sortByIdDesc());
         System.out.println(students);
 
         Collections.sort(students, new sortByNameDesc());
         System.out.println(students);
+
 
     }
 

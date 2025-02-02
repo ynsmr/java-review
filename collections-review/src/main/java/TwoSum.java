@@ -7,7 +7,7 @@ public class TwoSum {
 
         int[] myArray = {2,7,9,11};
         System.out.println(Arrays.toString(twoSum(myArray, 9)));
-        System.out.println("------------------Optimal Solution----------------");
+        System.out.println("-----------------Optimal Solution----------------");
         System.out.println(Arrays.toString(twoSum2(myArray, 9)));
 
 
@@ -31,6 +31,7 @@ public class TwoSum {
         Map<Integer, Integer> map = new HashMap<>();
         
         //Iterate over the array
+        //if a potential match exists return the indices, else put the array value and index to map
         for (int i = 0; i < array.length; i++) {
             int potentialMatch = target - array[i];
             if (map.containsKey(potentialMatch)){
@@ -43,7 +44,7 @@ public class TwoSum {
             
         }
         
-        //if a potential match exists return the indices, else put the array value and index to map
+
 
         return new int[]{};
     }

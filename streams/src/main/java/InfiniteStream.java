@@ -22,7 +22,5 @@ public class InfiniteStream {
                 .forEach(System.out::println);
 
 
-
-
     }
 }
